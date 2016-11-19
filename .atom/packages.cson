@@ -1,0 +1,36 @@
+packages: [
+  "atom-beautify"
+  "atom-django"
+  "autocomplete-paths"
+  "editorconfig"
+
+  "docblockr"
+  "django-templates"
+  "linter-pep8"
+
+  "emmet"
+
+  "es6-javascript"
+  "language-babel"
+
+  "language-docker"
+  "language-nginx"
+
+  "linter"
+  "linter-eslint"
+  "linter-scss-lint"
+
+  "autocomplete-go"
+  "go-config"
+  "go-debug"
+  "go-get"
+  "go-plus"
+  "go-rename"
+  "godoc"
+  "gofmt"
+  "gometalinter-linter"
+  "gorename"
+  "builder-go"
+  "navigator-go"
+  "tester-go"
+]

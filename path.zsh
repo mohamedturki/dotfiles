@@ -15,3 +15,7 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 
 # Local bin directories before anything else
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# Golang path settings
+export GOPATH="$CODE/golang"
+export PATH="$PATH:$GOPATH/bin"

@@ -20,6 +20,10 @@ alias vssh="vagrant ssh"
 alias vreload="vagrant reload"
 alias vrebuild="vagrant destroy --force && vagrant up"
 
+# Docker
+alias dm="docker-machine"
+alias dcp="docker-compose"
+
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 

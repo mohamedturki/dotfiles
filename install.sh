@@ -1,8 +1,7 @@
 #!/bin/sh
 
 echo "Setting up your Mac..."
-
-./install-xcode.sh
+sudo -v
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
@@ -19,15 +18,21 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Link installed apps to /Applications
+brew linkapps
+
+# Remove outdated versions from the cellar.
+brew cleanup
+brew cask cleanup
+
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
-# Create a Sites directory
-# This is a default directory for macOS user accounts but doesn't comes pre-installed
+# Create directory for all my code repositories.
 mkdir $HOME/dev
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
-
-./symlink-setup.sh
+source symlink-setup.sh
+source node.sh

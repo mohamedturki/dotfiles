@@ -4,6 +4,9 @@ export DOTFILES=$HOME/.dotfiles
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Code repositories path
+export CODE=$HOME/dev
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -60,6 +63,13 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='atom'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

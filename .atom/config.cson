@@ -1,0 +1,65 @@
+"*":
+  "atom-beautify":
+    _analyticsUserId: "b332109f-e304-48df-b5cd-f235fe318497"
+    css_align_assignments: true
+    css_force_indentation: true
+    css_indent_char: "space"
+    css_indent_size: 4
+    css_selector_separator_newline: true
+    general:
+      _analyticsUserId: "c903a9a7-3010-4122-b823-4a252690f088"
+    language_css_beautify_on_save: false
+    language_handlebars_beautify_on_save: true
+    language_json_beautify_on_save: true
+  core:
+    disabledPackages: [
+      "linter-scss-lint"
+      "linter-pep8"
+      "go-debug"
+      "builder-go"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    softWrap: true
+  emmet:
+    useEmmetComments: false
+  "exception-reporting":
+    userId: "4f569c6c-d43b-7e62-547f-2b5780a1571a"
+  "go-debug":
+    panelInitialVisible: false
+  "go-plus":
+    formatTool: "gofmt"
+    goPath: "$HOME/code/golang/:$HOME/code/Ecosia/v4.ecosia.org/"
+    showPanelWhenNoIssuesExist: false
+  jshint:
+    onlyConfig: true
+    supportLintingJsx: true
+    validateOnlyOnSave: false
+  "language-babel":
+    allowLocalOverride: true
+    autoIndentJSX: true
+  linter: {}
+  "linter-eslint":
+    fixOnSave: true
+  "linter-scss-lint":
+    disableWhenNoConfigFileInPath: true
+    executablePath: "/Users/med/.rvm/gems/ruby-2.2.1/bin/scss-lint"
+  react:
+    disableAutoClose: false
+  tabs:
+    usePreviewTabs: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".babel.regexp.source":
+  editor:
+    tabLength: 4
+".nginx.source":
+  editor:
+    tabLength: 4
+".sass.source":
+  editor:
+    autoIndentOnPaste: true
