@@ -37,6 +37,7 @@ brew 'go'
 brew 'postgres'
 brew 'heroku-toolbelt'
 brew 'tree'
+brew 'nvm'
 
 # Apps
 cask 'flux'

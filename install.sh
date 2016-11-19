@@ -34,5 +34,5 @@ mkdir $HOME/dev
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
-source symlink-setup.sh
-source node.sh
+./symlink-setup.sh
+./node.sh
