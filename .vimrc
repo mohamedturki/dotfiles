@@ -1,0 +1,9 @@
+syntax enable
+set number
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
