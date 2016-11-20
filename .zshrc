@@ -60,6 +60,9 @@ plugins=(git node docker docker-compose heroku httpie vagrant)
 # Activate Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
 
+# Activate the custom functions
+source $HOME/.functions
+
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
