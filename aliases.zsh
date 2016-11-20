@@ -9,7 +9,6 @@ alias weather="curl -4 http://wttr.in/berlin"
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
-alias sites="cd $HOME/Sites"
 alias dev="cd $HOME/dev"
 
 # Vagrant
