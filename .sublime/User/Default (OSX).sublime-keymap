@@ -26,4 +26,17 @@
         "match_all": true
     }]
 
-}]
+},{
+    "keys": [
+        ""
+    ],
+    "args": {
+        "action": "expand_abbreviation"
+    },
+    "command": "run_emmet_action",
+    "context": [
+        {
+            "key": "emmet_action_enabled.expand_abbreviation"
+        }
+    ]
+}, { "keys": ["ctrl+alt+s"], "command": "reveal_in_side_bar" }]
