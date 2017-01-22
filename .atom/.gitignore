@@ -1,3 +1,4 @@
 .apm
 compile-cache
 storage
+blob-store
