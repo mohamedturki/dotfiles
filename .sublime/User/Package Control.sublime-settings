@@ -1,0 +1,24 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Boxy Theme",
+		"Emmet",
+		"FuzzyFilePath",
+		"GitGutter",
+		"JSX",
+		"Package Control",
+		"React ES6 Snippets",
+		"sublime-es6-snippets",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint"
+	],
+	"repositories":
+	[
+		"https://github.com/mohamedturki/sublime-es6-snippets"
+	]
+}
