@@ -71,6 +71,32 @@
 
           export default $1;
         """
+    'Statefull React Component':
+        'prefix': 'streact'
+        'body': """
+          import React, { PropTypes, Component } from 'react';
+
+          class $1 extends Component {
+            constructor(props) {
+              super(props);
+            }
+            render() {
+              return (
+                <div>
+                </div>
+              )
+            }
+          };
+
+          $1.propTypes = {
+
+          };
+
+          export default $1;
+        """
     'React component tags':
         'prefix': 'rc'
         'body': '<$1 />'
+    'DOM element':
+        'prefix': 'dom'
+        'body': '<$1>$2</$1>'
