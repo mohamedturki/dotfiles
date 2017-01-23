@@ -9,6 +9,7 @@ packages: [
   "linter-pep8"
 
   "emmet"
+  "markdown-preview"
 
   "es6-javascript"
   "language-babel"
@@ -19,18 +20,4 @@ packages: [
   "linter"
   "linter-eslint"
   "linter-scss-lint"
-
-  "autocomplete-go"
-  "go-config"
-  "go-debug"
-  "go-get"
-  "go-plus"
-  "go-rename"
-  "godoc"
-  "gofmt"
-  "gometalinter-linter"
-  "gorename"
-  "builder-go"
-  "navigator-go"
-  "tester-go"
 ]

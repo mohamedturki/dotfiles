@@ -20,3 +20,57 @@
     'i18n key':
         'prefix': 'i18n'
         'body': 'this.i18n.__($1)'
+
+    'Test React':
+        'prefix': 'testreact'
+        'body': """
+          import React from 'react';
+          import { shallow } from 'enzyme';
+
+          import $1 from '$2';
+
+          describe('<$1 />', () => {
+            const props = {};
+            const component = shallow(<$1 {...props} />);
+
+            it('renders itself', () => {
+              expect(component).toBeDefined();
+            });
+          });
+        """
+    'Test React component exists':
+        'prefix': 'itfindsc'
+        'body': """
+          it('renders <$1 />', () => {
+            expect(component.find($1).length).toEqual(1);
+          });
+        """
+
+    'Test DOM element exists':
+        'prefix': 'itfindsd'
+        'body': """
+          it('renders $1 element', () => {
+            expect(component.find('.$2').length).toEqual(1);
+          });
+        """
+
+    'Stateless React Component':
+        'prefix': 'slreact'
+        'body': """
+          import React, { PropTypes } from 'react';
+
+          const $1 = () => {
+            return (
+              <div></div>
+            );
+          };
+
+          $1.propTypes = {
+
+          };
+
+          export default $1;
+        """
+    'React component tags':
+        'prefix': 'rc'
+        'body': '<$1 />'

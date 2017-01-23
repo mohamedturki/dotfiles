@@ -80,5 +80,9 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export NVM_DIR="/Users/mturki/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/mohamedturki/.sdkman"
+[[ -s "/Users/mohamedturki/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mohamedturki/.sdkman/bin/sdkman-init.sh"

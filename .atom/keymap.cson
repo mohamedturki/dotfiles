@@ -23,5 +23,10 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
-'atom-text-editor[data-grammar~="jsx"]:not([mini])':
-  'tab': 'emmet:expand-abbreviation-with-tab'
+# 'atom-text-editor[data-grammar~="jsx"]:not([mini])':
+#   'tab': 'emmet:expand-abbreviation-with-tab'
+'body':
+  'cmd-k l': 'pane:split-right-and-copy-active-item'
+  'cmd-k j': 'pane:split-left-and-copy-active-item'
+  'cmd-k k': 'pane:split-down-and-copy-active-item'
+  'cmd-k i': 'pane:split-up-and-copy-active-item'
