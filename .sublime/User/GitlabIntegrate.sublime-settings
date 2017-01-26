@@ -1,0 +1,26 @@
+  {
+  	//The project host
+  	"project_host":"https://scm2.uberall.com/uberall/",
+
+  	//Your user token for GitLab, found in [host]/profile/account
+  	"user_token":"SkBQYrbAoMCmyf5uqaWG",
+
+  	//Displays the new installation window
+  	"display_intro":false,
+
+  	//The name of the tab when using Edit Issue In Tab (note: if you open another tab with this name, weird things might happen)
+  	"edit_issue_in_tab_name": "[GLI]: Editing Issue",
+
+  	//Suppresses output of closed issues for the Select Issue command
+  	"hide_closed_issues":false,
+
+  	//Appears before all GitlabIntegrate outputs in the console and status bar
+  	"output_prefix":"[GLI]:",
+
+  	/*
+  	The default project ID.
+  	This can be found by running GitlabIntegrate's "Get Project IDs" command after configuring
+  	your host and user_token. All the projects you have access to should be listed with their IDs.
+  	*/
+  	"project_id": 0
+  }
