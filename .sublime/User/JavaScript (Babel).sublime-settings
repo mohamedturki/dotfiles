@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"sublime-settings",
-		"js"
+		"js",
+		"jsx"
 	]
 }

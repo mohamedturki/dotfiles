@@ -1,10 +1,10 @@
 [user]
-	email =
-	name =
+	email = hi@mturki.me
+	name = Mohamed Turki
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/mohamedturki/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [web]
 	browser = google-chrome
 [rerere]
@@ -181,4 +181,3 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/mohamedturki/.stCommitMsg
