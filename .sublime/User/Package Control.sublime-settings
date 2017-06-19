@@ -8,8 +8,13 @@
 		"AutoFileName",
 		"Babel",
 		"Boxy Theme",
+		"Djaneiro",
+		"Django Lookup Snippets",
+		"Django Tags",
+		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"Emmet",
+		"Format JSDoc @params",
 		"GitGutter",
 		"Github Tools",
 		"HTML5",
@@ -18,8 +23,7 @@
 		"Package Control",
 		"React ES6 Snippets",
 		"sublime-es6-snippets",
-		"SublimeLinter",
-		"SublimeLinter-contrib-eslint"
+		"SyncedSideBar"
 	],
 	"repositories":
 	[

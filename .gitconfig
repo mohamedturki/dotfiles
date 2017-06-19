@@ -54,6 +54,7 @@
 	ba = branch -a
 	bd = branch -d
 	br = branch -r
+	bc = branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 	#############
 	c = commit
 	ca = commit -a

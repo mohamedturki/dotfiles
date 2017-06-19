@@ -39,3 +39,5 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias showpath='echo -e ${PATH//:/\\n}'
 
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+alias python='python3'

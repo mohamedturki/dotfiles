@@ -1,5 +1,11 @@
 {
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Solarized Dark.tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"ube.js",
+		"store-finder-widget-bundle.js"
+	],
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -12,11 +18,13 @@
 		".idea"
 	],
 	"font_face": "Monaco",
-	"font_size": 13,
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"show_full_path": true,
 	"theme": "Boxy Solarized Dark.sublime-theme",
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "true"
 }
