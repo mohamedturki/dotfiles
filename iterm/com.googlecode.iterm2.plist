@@ -44,15 +44,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>714 553 620 392 0 0 2048 1129 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-<<<<<<< HEAD
-	<string>292 427 918 512 0 0 2048 1129 </string>
-	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1175 27 871 1102 0 0 2048 1152 </string>
-=======
 	<string>625 121 918 498 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>1055 33 865 1024 0 0 1920 1057 </string>
->>>>>>> Save
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1143 4 613 1047 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -786,13 +780,9 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-<<<<<<< HEAD
 	<string>/Users/mohamedturki/.dotfiles/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
-=======
-	<string>/Users/mturki/.dotfiles/iterm</string>
->>>>>>> Save
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
@@ -804,25 +794,15 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-<<<<<<< HEAD
 	<date>2017-02-20T09:26:14Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
-=======
-	<date>2017-07-29T08:53:36Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
->>>>>>> Save
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-<<<<<<< HEAD
-	<string>3.0.14</string>
-=======
 	<string>3.0.15</string>
->>>>>>> Save
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

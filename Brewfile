@@ -36,15 +36,12 @@ brew 'python3'
 brew 'go'
 brew 'postgres'
 brew 'heroku-toolbelt'
-brew 'tree'
 brew 'macvim'
 
 # Apps
 cask 'flux'
-cask 'atom'
 cask 'dash' # API docs
 cask 'dropbox'
-cask 'evernote'
 cask 'firefox'
 cask 'google-chrome'
 cask 'google-drive'
@@ -52,12 +49,11 @@ cask 'iterm2'
 cask 'rescuetime' # Activity tracking
 cask 'skype'
 cask 'slack'
-cask 'tower' # Git-tower
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vlc'
-cask 'gitkraken'
+cask ' visual-studio-code '
 
 # Quicklook
 cask 'qlcolorcode'
