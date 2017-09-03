@@ -1,3 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/mohamedturki/dev/uberall.com/.idea'
+let g:netrw_dirhist_2='/Users/mturki/dev/golang/src/github.com/mohamedturki/webserver'
+let g:netrw_dirhist_3='/Users/mturki/dev/discovery-app-react'
+let g:netrw_dirhist_4='/Users/mturki/dev/discovery-app-react/src'
+let g:netrw_dirhist_5='/Users/mturki/.dotfiles'
+let g:netrw_dirhist_6='/Users/mturki/dev/uberall.com/user-frontend'
+let g:netrw_dirhist_7='/Users/mturki/dev/food.mturki.me'
+let g:netrw_dirhist_8='/Users/mturki/dev'
+let g:netrw_dirhist_9='/Users/mturki/dev/discovery-app-react'
