@@ -4,13 +4,6 @@ filetype off        " required
 set encoding=utf8
 filetype plugin indent on
 
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-set guifont=Hack:h12
-
 "   Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -26,14 +19,15 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Yggdroot/indentLine'
+Plugin 'jiangmiao/auto-pairs'
 
 " Colorschemes
 Plugin 'alessandroyorba/sierra'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 " JavaScript plugins
 Plugin 'pangloss/vim-javascript'
@@ -75,6 +69,9 @@ set backspace=indent,eol,start
 " Map autocomplete to TAB
 imap <Tab> <C-N>
 
+" Confirm selection and hide autocomplete menu
+let g:ycm_key_list_stop_completion = ['<Enter>']
+
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
@@ -95,6 +92,14 @@ let g:user_emmet_leader_key='<c-y>'
 
 let g:jsx_ext_required = 0
 
+" Use the Solarized Dark theme
+set background=dark
+colorscheme hybrid_material
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+set guifont=Hack:h12
+
+let g:enable_bold_font = 1
 " Powerline config
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
