@@ -25,6 +25,7 @@ Plugin 'jiangmiao/auto-pairs'
 
 " Colorschemes
 Plugin 'alessandroyorba/sierra'
+Plugin 'beigebrucewayne/hacked_ayu.vim'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kristijanhusak/vim-hybrid-material'
@@ -32,8 +33,8 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 " JavaScript plugins
 Plugin 'pangloss/vim-javascript'
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 
 " Add all plugins before this line
@@ -85,28 +86,48 @@ set smartindent
 
 set splitright
 autocmd vimenter * NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$\']
+let NERDTreeIgnore=['\.pyc$', '\~$\', 'node_modules']
 let NERDTreeShowHidden=1
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+
+" Close a tab when NERDTree is the only remaining window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Reveal open file in NERDTree
+nmap <leader>,n :NERDTreeFind<CR>
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|project_files$\|test$\|build$\',
+  \ 'file': '\.so$\|\.dll$\|\.pyc$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+let g:ctrlp_max_files = 0
+let g:ctrlp_working_path_mode = 0
 
 let g:user_emmet_leader_key='<c-y>'
 
-let g:jsx_ext_required = 0
-
-" Use the Solarized Dark theme
 set background=dark
-colorscheme hybrid_material
+colorscheme hacked_ayu
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 set guifont=Hack:h12
 
+set ttimeout
+set ttimeoutlen=250
+set notimeout
+
 let g:enable_bold_font = 1
+let g:vim_jsx_pretty_colorful_config = 1 
 " Powerline config
-set guifont=Inconsolata\ for\ Powerline:h15
+" set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
+"set term=xterm-256color
 set termencoding=utf-8
 
 " Powerline config for MacVim
