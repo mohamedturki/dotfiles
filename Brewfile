@@ -60,4 +60,8 @@ cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'quicklook-csv'
+
+# Fonts
+cask 'font-hack-nerd-font'
+
 cask 'qlstephen'
