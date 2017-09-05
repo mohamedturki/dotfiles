@@ -11,6 +11,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
+set autoread
 set autoindent
 set showmatch " Matches parenthesis
 set cursorline
@@ -37,6 +38,7 @@ Plugin 'airblade/vim-gitgutter'   " See which files changed
 Plugin 'itchyny/lightline.vim'    " Status line
 Plugin 'jiangmiao/auto-pairs'     " Inserts or deletes [], () or quotes
 Plugin 'Yggdroot/indentLine'      " Show indentation
+Plugin 'editorconfig/editorconfig-vim'
 
 " Colorschemes
 Plugin 'tyrannicaltoucan/vim-quantum'
@@ -69,7 +71,7 @@ set termguicolors
 
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
-nmap <leader>b :NERDTreeFind<CR>  " Reveal current file
+nmap <leader>s :NERDTreeFind<CR>  " Reveal current file
 nmap <leader>b :NERDTreeToggle<CR> " Toggles dir tree
 autocmd VimEnter * NERDTree         " dir tree always open but not focused
 let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp']
@@ -78,6 +80,8 @@ let NERDTreeSHowHidden=1
 " ====== Plugins config ========
 let g:jsx_ext_required=0
 let g:user_emmet_leader_key='<c-y>'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 
 " ctrp + ag (the_silver_searcher)
 if executable('ag')
