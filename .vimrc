@@ -14,7 +14,7 @@ set smartindent
 set autoread
 set autoindent
 set showmatch " Matches parenthesis
-set cursorline
+"set cursorline
 set ruler
 set clipboard=unnamed
 autocmd BufWritePre * :%s/\s\+$//e " Removes whitespaces on save
@@ -67,21 +67,26 @@ set guifont=Hack:h12
 colorscheme quantum
 set background=dark
 set termguicolors
-
+autocmd! GUIEnter * set vb t_vb=    " Removes bell in MacVim
+set guioptions=     " Removes scrollbars in MacVim
 
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file
 nmap <leader>b :NERDTreeToggle<CR> " Toggles dir tree
 autocmd VimEnter * NERDTree         " dir tree always open but not focused
+autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp']
 let NERDTreeSHowHidden=1
 
+" A
 " ====== Plugins config ========
 let g:jsx_ext_required=0
 let g:user_emmet_leader_key='<c-y>'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 
 " ctrp + ag (the_silver_searcher)
 if executable('ag')

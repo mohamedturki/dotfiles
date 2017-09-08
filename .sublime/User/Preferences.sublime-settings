@@ -26,5 +26,8 @@
 	"show_full_path": true,
 	"theme": "Boxy Solarized Dark.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": "true"
+	"word_wrap": "true",
+	"vintage_start_in_command_mode": true,
+	"caret_style": "phase",
+	"highlight_line": true
 }
