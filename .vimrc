@@ -14,12 +14,14 @@ set smartindent
 set autoread
 set autoindent
 set showmatch " Matches parenthesis
-"set cursorline
+set cursorline
 set ruler
 set clipboard=unnamed
 autocmd BufWritePre * :%s/\s\+$//e " Removes whitespaces on save
 set splitright  " Defaults splitting to right side
-
+set noswapfile
+set nobackup
+set nowb
 
 " ======= Plugins ========
 " Set the runtime path to include Vundle and initialize
@@ -57,18 +59,19 @@ set backspace=indent,eol,start  " Make backspace behave normally
 
 " ======= Search ========
 set hlsearch  " Highlights found words in search
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>  " Cancels search with <ESC>
+"nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 set wildignore+=*.log,*.sql,*.cache
 
 
 
 " ======= Visual ========
-set guifont=Hack:h12
+set guifont=Monaco:h12
 colorscheme quantum
 set background=dark
 set termguicolors
 autocmd! GUIEnter * set vb t_vb=    " Removes bell in MacVim
 set guioptions=     " Removes scrollbars in MacVim
+autocmd VimResized * wincmd =
 
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
@@ -79,7 +82,6 @@ autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp']
 let NERDTreeSHowHidden=1
 
-" A
 " ====== Plugins config ========
 let g:jsx_ext_required=0
 let g:user_emmet_leader_key='<c-y>'
