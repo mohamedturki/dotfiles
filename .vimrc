@@ -22,7 +22,8 @@ set splitright  " Defaults splitting to right side
 set noswapfile
 set nobackup
 set nowb
-
+set title       " Show filename in the tab title
+set showcmd
 " ======= Plugins ========
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -84,13 +85,22 @@ autocmd! GUIEnter * set vb t_vb=    " Removes bell in MacVim
 set guioptions=     " Removes scrollbars in MacVim
 autocmd VimResized * wincmd =
 
+" Treat .json files as JS
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+
+" Treat .vue files as JS
+autocmd BufNewFile,BufRead *.vue setfiletype javascript syntax=javascript
+
+" Treat .md files as Markdown
+autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file
 nmap <leader>b :NERDTreeToggle<CR> " Toggles dir tree
 autocmd VimEnter * NERDTree         " dir tree always open but not focused
 autocmd VimEnter * wincmd p
-let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp']
+let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp', 'node_modules', '\.git']
 let NERDTreeSHowHidden=1
 
 " ====== Plugins config ========
