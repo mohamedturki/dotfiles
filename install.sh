@@ -35,4 +35,5 @@ mkdir $HOME/dev
 # We will run this last because this will reload the shell
 source .macos
 ./symlink-setup.sh
+cp env.secrets.zsh $HOME/.env.secrets.zsh
 ./node.sh

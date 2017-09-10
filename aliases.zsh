@@ -41,3 +41,9 @@ alias showpath='echo -e ${PATH//:/\\n}'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias python='python3'
+
+# Get my ip
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+source "$DOTFILES/.git_aliases.zsh"
+

@@ -26,3 +26,27 @@ function fs() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Creates a new git branch
+function nb {
+  NEW_BRANCH_NAME=$1
+  git checkout -b $NEW_BRANCH_NAME
+  git branch --set-upstream-to origin/$NEW_BRANCH_NAME
+}
+
+function git_clean_branches {
+  git branch --merged master | grep -v "master" | grep -v "^\*" | xargs -n 1  bash -c 'git branch -D $@ && git push origin $@ 2> /dev/null' bash
+}
+
+alias gcl=git_clean_branches
+
+function jira {
+  if [ $# -eq 0 ]
+    then
+      open https://jira.uberall.com/browse/UB-`gcb | grep -oE '\d{4}'`
+    else
+      TICKET_ID=$1
+      open https://jira.uberall.com/browse/$TICKET_ID
+    fi
+}
+

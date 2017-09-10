@@ -38,6 +38,8 @@ brew 'postgres'
 brew 'heroku-toolbelt'
 brew 'macvim'
 brew 'acke'
+brew 'docker'
+brew 'fontforge'
 
 # Apps
 cask 'flux'
@@ -54,7 +56,6 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vlc'
-cask ' visual-studio-code '
 
 # Quicklook
 cask 'qlcolorcode'

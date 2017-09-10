@@ -39,7 +39,6 @@ Plugin 'tpope/vim-fugitive'       " Git
 Plugin 'airblade/vim-gitgutter'   " See which files changed
 Plugin 'itchyny/lightline.vim'    " Status line
 Plugin 'jiangmiao/auto-pairs'     " Inserts or deletes [], () or quotes
-Plugin 'Yggdroot/indentLine'      " Show indentation
 Plugin 'editorconfig/editorconfig-vim'
 
 " Colorschemes
@@ -48,6 +47,7 @@ Plugin 'tyrannicaltoucan/vim-quantum'
 " Languages support
 Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'elzr/vim-json'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
 
@@ -59,8 +59,19 @@ set backspace=indent,eol,start  " Make backspace behave normally
 
 " ======= Search ========
 set hlsearch  " Highlights found words in search
-"nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 set wildignore+=*.log,*.sql,*.cache
+set wildignore+=*/tmp/*                                     " ctrlp - ignore files in tmp directories
+set wildignore+=*/target/*                                  " ctrlp - ignore files in target directories
+set wildignore+=*/build/*                                   " ctrlp - ignore gradle build directories
+set wildignore+=*.so                                        " ctrlp - ignore .so files
+set wildignore+=*.o                                         " ctrlp - ignore .o files
+set wildignore+=*.class                                     " ctrlp - ignore .class files
+set wildignore+=*.swp                                       " ctrlp - ignore .swp files
+set wildignore+=*.zip                                       " ctrlp - ignore .zip files
+set wildignore+=*.pdf                                       " ctrlp - ignore .pdf files
+set wildignore+=*/node_modules/*                            " ctrlp - ignore node modules
+set wildignore+=*/bower_components/*                        " ctrlp - ignore bower components
+set wildignore+=*/dist/*                                    " ctrlp - ignore grunt build directory
 
 
 
@@ -89,6 +100,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
+let g:ctrlp_by_filename = 0
 
 " ctrp + ag (the_silver_searcher)
 if executable('ag')

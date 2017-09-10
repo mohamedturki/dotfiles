@@ -12,4 +12,4 @@ source ~/.zshrc
 nvm install stable;
 nvm alias default stable;
 
-npm i -g standard nodemon http-server svgo
+npm i -g standard nodemon http-server svgo contentful
