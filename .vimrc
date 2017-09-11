@@ -34,13 +34,14 @@ Plugin 'gmarik/Vundle.vim'
 " General
 Plugin 'kien/ctrlp.vim'  " Fuzzy search
 Plugin 'scrooloose/nerdtree'  " Sidebar for dir tree
-Plugin 'scrooloose/nerdcommenter'  " Comment/uncomment large code
+Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-surround'       " No, not for surround system.
 Plugin 'tpope/vim-fugitive'       " Git
 Plugin 'airblade/vim-gitgutter'   " See which files changed
 Plugin 'itchyny/lightline.vim'    " Status line
 Plugin 'jiangmiao/auto-pairs'     " Inserts or deletes [], () or quotes
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'vim-airline/vim-airline'
 
 " Colorschemes
 Plugin 'tyrannicaltoucan/vim-quantum'

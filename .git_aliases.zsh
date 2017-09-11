@@ -21,7 +21,7 @@ alias aa='git add --all :/'
 alias ap='git add --patch'
 alias co='git commit'
 alias com='git commit -m'
-alias ca='git add --all :/; git commit --amend --no-edit'
+alias ca='git add --all :/; git commit -a'
 
 alias p='git push'
 alias pp='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
