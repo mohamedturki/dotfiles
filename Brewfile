@@ -42,6 +42,7 @@ brew 'docker'
 brew 'fontforge'
 
 # Apps
+cask '1password'
 cask 'flux'
 cask 'dash' # API docs
 cask 'dropbox'
