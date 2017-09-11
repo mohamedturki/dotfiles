@@ -52,6 +52,10 @@ Plugin 'elzr/vim-json'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
 
+" Snippets
+Plugin 'epilande/vim-es2015-snippets'
+Plugin 'epilande/vim-react-snippets'
+Plugin 'SirVer/ultisnips'
 call vundle#end()
 
 " ===== Mapping ========
@@ -105,13 +109,21 @@ let NERDTreeSHowHidden=1
 
 " ====== Plugins config ========
 let g:jsx_ext_required=0
+let g:vim_jsx_pretty_colorful_config = 1
 let g:user_emmet_leader_key='<c-y>'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" ===== ctrlp config =========
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_by_filename = 0
 
+" ===== UltiSnips config =======
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " ctrp + ag (the_silver_searcher)
 if executable('ag')
   " Use Ag over Grep

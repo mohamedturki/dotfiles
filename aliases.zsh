@@ -2,6 +2,7 @@
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias ccli="$EDITOR $DOTFILES/.zshrc"
 alias cvim="$EDITOR $DOTFILES/.vimrc"
+alias vundle="vim +PluginInstall +qall"
 alias reloadcli="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="$(brew --prefix coreutils)/libexec/gnubin/ls -ahlF --color --group-directories-first"
