@@ -62,7 +62,7 @@ call vundle#end()
 " ===== Mapping ========
 let mapleader=','
 set backspace=indent,eol,start  " Make backspace behave normally
-
+imap <C-o> <esc>o
 " ======= Search ========
 set hlsearch  " Highlights found words in search
 set wildignore+=*.log,*.sql,*.cache
