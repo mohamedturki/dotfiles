@@ -11,7 +11,8 @@ export CODE=$HOME/dev
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -56,7 +57,7 @@ ZSH_CUSTOM=$DOTFILES
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git node docker docker-compose heroku httpie vagrant)
-
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Activate Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
 

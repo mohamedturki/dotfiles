@@ -8,7 +8,7 @@ tap 'homebrew/dupes'
 # Install ZSH
 brew 'zsh'
 brew 'zsh-completions'
-
+brew 'zsh-autosuggestions'
 # Install GNU core utilities (those that come with macOS are outdated)
 brew 'coreutils'
 
