@@ -42,6 +42,7 @@ Plugin 'itchyny/lightline.vim'    " Status line
 Plugin 'jiangmiao/auto-pairs'     " Inserts or deletes [], () or quotes
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'ternjs/tern_for_vim'      " Code analysis support for JS using Tern
 
 " Colorschemes
 Plugin 'tyrannicaltoucan/vim-quantum'
@@ -49,6 +50,7 @@ Plugin 'tyrannicaltoucan/vim-quantum'
 " Languages support
 Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'w0rp/ale'
 Plugin 'elzr/vim-json'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
@@ -63,6 +65,10 @@ call vundle#end()
 let mapleader=','
 set backspace=indent,eol,start  " Make backspace behave normally
 imap <C-o> <esc>o
+" Navigate between buffers
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+
 " ======= Search ========
 set hlsearch  " Highlights found words in search
 set wildignore+=*.log,*.sql,*.cache
@@ -78,7 +84,7 @@ set wildignore+=*.pdf                                       " ctrlp - ignore .pd
 set wildignore+=*/node_modules/*                            " ctrlp - ignore node modules
 set wildignore+=*/bower_components/*                        " ctrlp - ignore bower components
 set wildignore+=*/dist/*                                    " ctrlp - ignore grunt build directory
-
+set wildignore+=*/.vim/
 
 
 " ======= Visual ========
@@ -89,6 +95,7 @@ set termguicolors
 autocmd! GUIEnter * set vb t_vb=    " Removes bell in MacVim
 set guioptions=     " Removes scrollbars in MacVim
 autocmd VimResized * wincmd =
+set guicursor=n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20
 
 " Treat .json files as JS
 autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
@@ -99,6 +106,22 @@ autocmd BufNewFile,BufRead *.vue setfiletype javascript syntax=javascript
 " Treat .md files as Markdown
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
+" ====== Plugins config ========
+let g:jsx_ext_required=0
+let g:vim_jsx_pretty_colorful_config = 1
+let g:user_emmet_leader_key='<c-y>'
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save=1
+let g:airline#extensions#tabline#enabled = 1 "
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file
@@ -107,12 +130,6 @@ autocmd VimEnter * NERDTree         " dir tree always open but not focused
 autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp', 'node_modules', '\.git']
 let NERDTreeSHowHidden=1
-
-" ====== Plugins config ========
-let g:jsx_ext_required=0
-let g:vim_jsx_pretty_colorful_config = 1
-let g:user_emmet_leader_key='<c-y>'
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " ===== ctrlp config =========
 let g:ctrlp_show_hidden = 1
@@ -134,4 +151,12 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" Copied from https://github.com/w0rp/ale#generating-vim-help-files
+" Put these lines at the very end of your vimrc file.
 
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL

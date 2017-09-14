@@ -57,6 +57,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vlc'
+cask 'insomnia'
 
 # Quicklook
 cask 'qlcolorcode'
