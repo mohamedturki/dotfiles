@@ -42,6 +42,7 @@ Plugin 'itchyny/lightline.vim'    " Status line
 Plugin 'jiangmiao/auto-pairs'     " Inserts or deletes [], () or quotes
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ternjs/tern_for_vim'      " Code analysis support for JS using Tern
 
 " Colorschemes
@@ -89,6 +90,7 @@ set wildignore+=*/.vim/
 
 " ======= Visual ========
 set guifont=Monaco:h12
+let g:airline_powerline_fonts = 1
 colorscheme quantum
 set background=dark
 set termguicolors
