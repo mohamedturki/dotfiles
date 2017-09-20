@@ -55,9 +55,9 @@ Plugin 'w0rp/ale'
 Plugin 'elzr/vim-json'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Snippets
-Plugin 'epilande/vim-es2015-snippets'
 Plugin 'epilande/vim-react-snippets'
 Plugin 'SirVer/ultisnips'
 call vundle#end()
@@ -67,8 +67,8 @@ let mapleader=','
 set backspace=indent,eol,start  " Make backspace behave normally
 imap <C-o> <esc>o
 " Navigate between buffers
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR>
+map <C-J> :bprev<CR>
+map <C-K> :bnext<CR>
 
 " ======= Search ========
 set hlsearch  " Highlights found words in search
@@ -118,12 +118,20 @@ let g:user_emmet_settings = {
 \  },
 \}
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:airline#extensions#tabline#enabled = 1
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+let g:mustache_abbreviations = 1
 
+" ======= ale (linting) config ====
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 let g:ale_fix_on_save=1
-let g:airline#extensions#tabline#enabled = 1 "
+
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file

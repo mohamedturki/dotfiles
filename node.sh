@@ -12,4 +12,4 @@ source ~/.zshrc
 nvm install stable;
 nvm alias default stable;
 
-npm i -g standard nodemon http-server svgo contentful
+npm i -g standard nodemon http-server svgo contentful eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-standard eslint-config-standard eslint-plugin-import

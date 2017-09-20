@@ -11,7 +11,6 @@ export CODE=$HOME/dev
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -57,7 +56,8 @@ ZSH_CUSTOM=$DOTFILES
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git node docker docker-compose heroku httpie vagrant)
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
 # Activate Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -98,10 +98,3 @@ export EDITOR="vim"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-material.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

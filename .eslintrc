@@ -1,0 +1,12 @@
+{
+  "extends":["standard", "plugin:react/recommended"],
+  "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+          "classes": true,
+          "jsx": true
+      }
+  },
+  "plugins": ["react", "promise", "standard"]
+}
