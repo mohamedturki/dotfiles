@@ -89,6 +89,7 @@ set wildignore+=*/.vim/
 
 
 " ======= Visual ========
+set lazyredraw
 set guifont=Monaco:h12
 let g:airline_powerline_fonts = 1
 colorscheme quantum
