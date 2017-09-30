@@ -43,7 +43,10 @@ alias showpath='echo -e ${PATH//:/\\n}'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias python='python3'
-
+alias n='npm'
+alias ni='npm i'
+alias nis='npm i -S'
+alias nid='npm i -D'
 # Get my ip
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 

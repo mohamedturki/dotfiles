@@ -47,7 +47,7 @@ endsnippet
 
 snippet "\.(map|filter|forEach|reduce)" "Array method with an arrow function" r
 .`!p snip.rv = match.group(1)`(${1} => {
-	return $2
+	$2
 })
 endsnippet
 
@@ -81,7 +81,7 @@ endsnippet
 
 snippet => "Arrow function"
 (${1:args}) => {
-	return $2
+	$2
 }
 endsnippet
 
@@ -91,8 +91,8 @@ endsnippet
 
 snippet c=> "Const function" bA
 const ${1:name} = (${2:args}) => {
-	return $4
-}${3:}
+	$3
+}
 endsnippet
 
 snippet c=>> "Const inline arrow function" bA
@@ -137,4 +137,26 @@ endsnippet
 
 snippet pt "React.proptype definition" b
 ${1}: PropTypes.${2}
+endsnippet
+
+snippet if "Simple if statement" b
+if (${1}) {
+  ${2}
+}
+endsnippet
+
+snippet ifelse "if/else statement" b
+if (${1}) {
+  ${2}
+} else {
+  ${3}
+}
+endsnippet
+
+snippet ifelseif "if/else if statement" b
+if (${1}) {
+  ${2}
+} else if (${3}) {
+  ${4}
+}
 endsnippet
