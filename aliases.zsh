@@ -14,7 +14,6 @@ alias library="cd $HOME/Library"
 alias dev="cd $HOME/dev"
 
 # Vagrant
-alias v="vagrant global-status"
 alias vup="vagrant up"
 alias vhalt="vagrant halt"
 alias vssh="vagrant ssh"
@@ -41,12 +40,15 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias showpath='echo -e ${PATH//:/\\n}'
 
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias vim='nvim'
+alias v='nvim'
 alias python='python3'
+alias pip='pip3'
 alias n='npm'
 alias ni='npm i'
 alias nis='npm i -S'
 alias nid='npm i -D'
+alias nig='npm i -g'
 # Get my ip
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 

@@ -24,6 +24,7 @@ set nobackup
 set nowb
 set title       " Show filename in the tab title
 set showcmd
+set mouse=a
 " ======= Plugins ========
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -51,11 +52,12 @@ Plugin 'tyrannicaltoucan/vim-quantum'
 " Languages support
 Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
 Plugin 'elzr/vim-json'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'wavded/vim-stylus'
 
 " Snippets
 Plugin 'epilande/vim-react-snippets'
@@ -69,6 +71,7 @@ imap <C-o> <esc>o
 " Navigate between buffers
 map <C-J> :bprev<CR>
 map <C-K> :bnext<CR>
+map <leader>w :bp<bar>sp<bar>bn<bar>bd<CR> " Moves to another buffer and deletes the one it moved from
 
 " ======= Search ========
 set hlsearch  " Highlights found words in search
@@ -90,7 +93,7 @@ set wildignore+=*/.vim/
 
 " ======= Visual ========
 set lazyredraw
-set guifont=Monaco:h12
+set guifont=Monaco_Powerline:h12
 let g:airline_powerline_fonts = 1
 colorscheme quantum
 set background=dark
@@ -109,6 +112,9 @@ autocmd BufNewFile,BufRead *.vue setfiletype javascript syntax=javascript
 " Treat .md files as Markdown
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
+" Treat .styl files as Stylus
+autocmd BufNewFile,BufRead *.styl set filetype=stylus
+
 " ====== Plugins config ========
 let g:jsx_ext_required=0
 let g:vim_jsx_pretty_colorful_config = 1
@@ -124,14 +130,13 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 let g:mustache_abbreviations = 1
 
-" ======= ale (linting) config ====
-let g:ale_sign_error = '●' " Less aggressive than the default '>>'
-let g:ale_sign_warning = '.'
-let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\}
-let g:ale_fix_on_save=1
+" " ======= ale (linting) config ====
+" let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+" let g:ale_sign_warning = '.'
+" let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+" let g:ale_fixers = {
+" \   'javascript': ['eslint'],
+" \}
 
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1

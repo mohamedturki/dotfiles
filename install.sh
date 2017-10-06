@@ -21,10 +21,6 @@ brew bundle
 # Link installed apps to /Applications
 brew linkapps
 
-# Remove outdated versions from the cellar.
-brew cleanup
-brew cask cleanup
-
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 

@@ -37,7 +37,6 @@ brew 'go'
 brew 'postgres'
 brew 'heroku-toolbelt'
 brew 'macvim'
-brew 'acke'
 brew 'docker'
 brew 'fontforge'
 
