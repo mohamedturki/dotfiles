@@ -45,6 +45,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ternjs/tern_for_vim'      " Code analysis support for JS using Tern
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 " Colorschemes
 Plugin 'tyrannicaltoucan/vim-quantum'

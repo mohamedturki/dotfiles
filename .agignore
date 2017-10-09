@@ -1,0 +1,15 @@
+ql
+.git/
+/vendor/
+/node_modules/
+/build/
+*.pdf
+*.md
+*.log.sql
+.git/
+/vendor/
+/node_modules/
+/build/
+*.pdf
+*.md
+*.log

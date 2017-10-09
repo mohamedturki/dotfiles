@@ -40,15 +40,10 @@ function git_clean_branches {
 
 alias gcl=git_clean_branches
 
-function jira {
-  if [ $# -eq 0 ]
-    then
-      open https://jira.uberall.com/browse/UB-`gcb | grep -oE '\d{4}'`
-    else
-      TICKET_ID=$1
-      open https://jira.uberall.com/browse/$TICKET_ID
-    fi
+function preview {
+  open $PREVIEW_ENV?ui_version=$(git rev-parse HEAD)
 }
+
 # who is using the laptop's iSight camera?
 camerausedby () {
   echo "Checking to see who is using the iSight camera… 📷"
