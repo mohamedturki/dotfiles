@@ -38,6 +38,7 @@ Plugin 'scrooloose/nerdtree'  " Sidebar for dir tree
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-surround'       " No, not for surround system.
 Plugin 'tpope/vim-fugitive'       " Git
+Plugin 'tpope/vim-rhubarb'
 Plugin 'airblade/vim-gitgutter'   " See which files changed
 Plugin 'itchyny/lightline.vim'    " Status line
 Plugin 'jiangmiao/auto-pairs'     " Inserts or deletes [], () or quotes
@@ -54,12 +55,14 @@ Plugin 'tyrannicaltoucan/vim-quantum'
 " Languages support
 Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
-" Plugin 'w0rp/ale'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'w0rp/ale'
 Plugin 'elzr/vim-json'
 Plugin 'mattn/emmet-vim'
 Plugin 'groenewege/vim-less'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wavded/vim-stylus'
+Plugin 'digitaltoad/vim-pug'
 
 " Snippets
 Plugin 'epilande/vim-react-snippets'
@@ -74,6 +77,19 @@ imap <C-o> <esc>o
 map <C-J> :bprev<CR>
 map <C-K> :bnext<CR>
 map <leader>w :bp<bar>sp<bar>bn<bar>bd<CR> " Moves to another buffer and deletes the one it moved from
+nnoremap p p=`] " Respects indentation on paste.
+vnoremap > >gv " Retains visiual selection after indentation
+vnoremap < <gv
+nnoremap \ :Ag<SPACE>
+nnoremap <leader>c :noh<CR>
+
+" Some useful Tern mapping
+nnoremap <leader>td :TernDef<CR>
+nnoremap <leader>tr :TernRefs<CR>
+nnoremap <leader>tn :TernRename<CR>
+
+" Add ; at the end of the line
+nnoremap ; A;
 
 " ======= Search ========
 set hlsearch  " Highlights found words in search
@@ -107,6 +123,7 @@ set guicursor=n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20
 
 " Treat .json files as JS
 autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 " Treat .vue files as JS
 autocmd BufNewFile,BufRead *.vue setfiletype javascript syntax=javascript
@@ -116,6 +133,9 @@ autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
 " Treat .styl files as Stylus
 autocmd BufNewFile,BufRead *.styl set filetype=stylus
+
+" Treat .jade files as Pug
+autocmd BufNewFile,BufRead *.jade set filetype=pug
 
 " ====== Plugins config ========
 let g:jsx_ext_required=0
@@ -133,13 +153,12 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 let g:mustache_abbreviations = 1
 
 " " ======= ale (linting) config ====
-" let g:ale_sign_error = '●' " Less aggressive than the default '>>'
-" let g:ale_sign_warning = '.'
-" let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
-" let g:ale_fixers = {
-" \   'javascript': ['eslint'],
-" \}
-
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file

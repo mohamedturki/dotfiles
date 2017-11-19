@@ -2,17 +2,16 @@
 alias d='git diff'
 alias s='git status'
 alias c='git checkout'
+alias l='git pull'
 
 alias b='git branch -v'
 
 alias cm='git checkout master'
 alias gd='git checkout develop'
 
-alias f='git add --all :/; git commit -m "fix"'
+alias fixup='git add --all :/; git commit --fixup=$(git rev-parse --verify HEAD)'
 alias fp='git add --all :/; git commit -m "fix"; git push'
 alias wip='git add --all :/; git commit -am "wip"'
-
-alias l='git pull --rebase'
 
 alias gsh='git show'
 
@@ -35,6 +34,7 @@ alias unc='git reset --soft HEAD\^'
 alias gl='git log --graph --date=short --pretty=oneline --abbrev-commit'
 alias gls='git log --graph --date=short --pretty=oneline --abbrev-commit -n10'
 
+alias gr='git rebase'
 alias gri='git rebase -i'
 alias grc='git rebase --continue'
 alias rim='git rebase -i master'

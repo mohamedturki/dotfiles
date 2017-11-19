@@ -44,6 +44,10 @@ function preview {
   open $PREVIEW_ENV?ui_version=$(git rev-parse HEAD)
 }
 
+function sg {
+  open http://localhost:3001/styleguide/
+}
+
 # who is using the laptop's iSight camera?
 camerausedby () {
   echo "Checking to see who is using the iSight camera… 📷"

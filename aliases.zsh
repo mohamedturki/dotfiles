@@ -42,8 +42,10 @@ alias showpath='echo -e ${PATH//:/\\n}'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias vim='nvim'
 alias v='nvim'
+
 alias python='python3'
 alias pip='pip3'
+
 alias n='npm'
 alias ni='npm i'
 alias nis='npm i -S'
@@ -52,5 +54,10 @@ alias nig='npm i -g'
 # Get my ip
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+alias pr="hub browse -- pulls"
+alias prrev="open $(hub browse -u -- pulls)/review-requested/mohamedturki"
+alias prs="open $(hub browse -u -- pulls)/mohamedturki"
+
+alias cui="itermocil ui"
 source "$DOTFILES/.git_aliases.zsh"
 
