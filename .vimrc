@@ -163,7 +163,7 @@ let g:ale_linters = {
 let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file
 nmap <leader>b :NERDTreeToggle<CR> " Toggles dir tree
-autocmd VimEnter * NERDTree         " dir tree always open but not focused
+" autocmd VimEnter * NERDTree         " dir tree always open but not focused
 autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp', 'node_modules', '\.git']
 let NERDTreeSHowHidden=1
