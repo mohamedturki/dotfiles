@@ -48,6 +48,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ternjs/tern_for_vim'      " Code analysis support for JS using Tern
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'mileszs/ack.vim'
 
 " Colorschemes
 Plugin 'tyrannicaltoucan/vim-quantum'
@@ -63,6 +64,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'elmcast/elm-vim'
 
 " Snippets
 Plugin 'epilande/vim-react-snippets'
@@ -80,7 +82,7 @@ map <leader>w :bp<bar>sp<bar>bn<bar>bd<CR> " Moves to another buffer and deletes
 nnoremap p p=`] " Respects indentation on paste.
 vnoremap > >gv " Retains visiual selection after indentation
 vnoremap < <gv
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Ack<SPACE>
 nnoremap <leader>c :noh<CR>
 
 " Some useful Tern mapping
@@ -183,7 +185,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
-
+  let g:ackprg = 'ag --vimgrep'
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif

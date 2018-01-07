@@ -19,3 +19,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Golang path settings
 export GOPATH="$CODE/golang"
 export PATH="$PATH:$GOPATH/bin"
+
+# Pyenv root
+export PYENV_ROOT=/usr/local/var/pyenv

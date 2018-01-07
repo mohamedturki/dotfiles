@@ -44,7 +44,6 @@ alias vim='nvim'
 alias v='nvim'
 
 alias python='python3'
-alias pip='pip3'
 
 alias n='npm'
 alias ni='npm i'
