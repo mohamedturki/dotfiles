@@ -56,6 +56,7 @@ Plugin 'tyrannicaltoucan/vim-quantum'
 " Languages support
 Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'lambdatoast/elm.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'w0rp/ale'
 Plugin 'elzr/vim-json'
@@ -64,7 +65,6 @@ Plugin 'groenewege/vim-less'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'elmcast/elm-vim'
 
 " Snippets
 Plugin 'epilande/vim-react-snippets'
@@ -138,6 +138,9 @@ autocmd BufNewFile,BufRead *.styl set filetype=stylus
 
 " Treat .jade files as Pug
 autocmd BufNewFile,BufRead *.jade set filetype=pug
+
+" Treat .elm files as Elm
+autocmd BufNewFile,BufRead *.elm set filetype=elm
 
 " ====== Plugins config ========
 let g:jsx_ext_required=0

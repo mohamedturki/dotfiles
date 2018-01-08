@@ -43,8 +43,6 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias vim='nvim'
 alias v='nvim'
 
-alias python='python3'
-
 alias n='npm'
 alias ni='npm i'
 alias nis='npm i -S'
