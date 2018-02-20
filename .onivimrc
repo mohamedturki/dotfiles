@@ -1,74 +1,73 @@
 set nocompatible
 set encoding=utf8
-set number " Turns on line numbering
-set numberwidth=2 " Sets the line numbers to 2 spaces
-
-" ======= File =========
-syntax on
-filetype plugin indent on
+set numberwidth=2 " Sets the line numbers to 2 spacesset tabstop=2
+set shiftwidth=2
 
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
+
 set expandtab
 set smartindent
 set autoread
 set autoindent
 set showmatch " Matches parenthesis
 set cursorline
-set ruler
 set clipboard=unnamed
 autocmd BufWritePre * :%s/\s\+$//e " Removes whitespaces on save
 set splitright  " Defaults splitting to right side
-set noswapfile
 set nobackup
 set nowb
-set title       " Show filename in the tab title
-set showcmd
+set guioptions=     " Removes scrollbars in MacVim
+
+" ======= Onivim defaults ====
+set number
+set noswapfile
+set smartcase
+
+" Turn off statusbar, because it is externalized
+set noshowmode
+set noruler
+set laststatus=0
+set noshowcmd
+
+" Enable GUI mouse behavior
 set mouse=a
+
+set list
+set listchars=trail:·
+
+colorscheme onedark
+
 " ======= Plugins ========
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
-" General
 Plugin 'kien/ctrlp.vim'  " Fuzzy search
 Plugin 'scrooloose/nerdtree'  " Sidebar for dir tree
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-surround'       " No, not for surround system.
 Plugin 'tpope/vim-fugitive'       " Git
-Plugin 'tpope/vim-rhubarb'
 Plugin 'airblade/vim-gitgutter'   " See which files changed
-Plugin 'itchyny/lightline.vim'    " Status line
-Plugin 'jiangmiao/auto-pairs'     " Inserts or deletes [], () or quotes
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ternjs/tern_for_vim'      " Code analysis support for JS using Tern
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
-
-" Colorschemes
-Plugin 'tyrannicaltoucan/vim-quantum'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'easymotion/vim-easymotion'
 
 " Languages support
 Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'sheerun/vim-polyglot'
+Plugin 'vim-python/python-syntax'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'w0rp/ale'
-Plugin 'elzr/vim-json'
-Plugin 'mattn/emmet-vim'
-Plugin 'groenewege/vim-less'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'wavded/vim-stylus'
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plugin 'digitaltoad/vim-pug'
+Plugin 'wavded/vim-stylus'
 
-" Snippets
-Plugin 'epilande/vim-react-snippets'
-Plugin 'SirVer/ultisnips'
 call vundle#end()
 
 " ===== Mapping ========
@@ -90,9 +89,6 @@ nnoremap <leader>td :TernDef<CR>
 nnoremap <leader>tr :TernRefs<CR>
 nnoremap <leader>tn :TernRename<CR>
 
-" Add ; at the end of the line
-nnoremap ; A;
-
 " ======= Search ========
 set hlsearch  " Highlights found words in search
 set wildignore+=*.log,*.sql,*.cache
@@ -110,52 +106,11 @@ set wildignore+=*/bower_components/*                        " ctrlp - ignore bow
 set wildignore+=*/dist/*                                    " ctrlp - ignore grunt build directory
 set wildignore+=*/.vim/
 
-
-" ======= Visual ========
-set lazyredraw
-set guifont=Monaco_Powerline:h12
-let g:airline_powerline_fonts = 1
-colorscheme quantum
-set background=dark
-set termguicolors
-autocmd! GUIEnter * set vb t_vb=    " Removes bell in MacVim
-set guioptions=     " Removes scrollbars in MacVim
-autocmd VimResized * wincmd =
-set guicursor=n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20
-
-" Treat .json files as JS
-autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
-
-" Treat .vue files as JS
-autocmd BufNewFile,BufRead *.vue setfiletype javascript syntax=javascript
-
-" Treat .md files as Markdown
-autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-
-" Treat .styl files as Stylus
-autocmd BufNewFile,BufRead *.styl set filetype=stylus
-
-" Treat .jade files as Pug
-autocmd BufNewFile,BufRead *.jade set filetype=pug
-
-" Treat .elm files as Elm
-autocmd BufNewFile,BufRead *.elm set filetype=elm
-
-" ====== Plugins config ========
-let g:jsx_ext_required=0
-let g:vim_jsx_pretty_colorful_config = 1
-let g:user_emmet_leader_key='<c-y>'
-let g:user_emmet_settings = {
-\  'javascript' : {
-\      'extends' : 'jsx',
-\  },
-\}
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-let g:airline#extensions#tabline#enabled = 1
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
-let g:mustache_abbreviations = 1
+" ===== ctrlp config =========
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+let g:ctrlp_by_filename = 0
 
 " " ======= ale (linting) config ====
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
@@ -164,26 +119,21 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
+
+let g:python_highlight_string_formatting = 1
+let g:python_highlight_string_format = 1
+let g:python_highlight_string_templates = 1
+let g:python_highlight_indent_errors = 1
+let g:python_highlight_space_errors = 1
+let g:python_highlight_class_vars = 1
+let g:python_highlight_operators = 1
+
 " ======= NERDTree config =======
 let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file
 nmap <leader>b :NERDTreeToggle<CR> " Toggles dir tree
-" autocmd VimEnter * NERDTree         " dir tree always open but not focused
-autocmd VimEnter * wincmd p
-let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp', 'node_modules', '\.git']
-let NERDTreeSHowHidden=1
 
-" ===== ctrlp config =========
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=40
-let g:ctrlp_by_filename = 0
-
-" ===== UltiSnips config =======
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " ===== ctrp + ag (the_silver_searcher) =====
 if executable('ag')

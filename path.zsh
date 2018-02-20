@@ -20,5 +20,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export GOPATH="$CODE/golang"
 export PATH="$PATH:$GOPATH/bin"
 
+export ELM_MAKE_PATH="$HOME/.nvm/versions/node/v6.11.0/bin/elm-make"
+export PATH="$PATH:$ELM_MAKE_PATH"
 # Pyenv root
 export PYENV_ROOT=/usr/local/var/pyenv

@@ -41,7 +41,7 @@ function git_clean_branches {
 alias gcl=git_clean_branches
 
 function preview {
-  open $PREVIEW_ENV?ui_version=$(git rev-parse HEAD)
+  open $PREVIEW_ENV?ui_version=$(git branch | grep \* | cut -d ' ' -f2)
 }
 
 function sg {

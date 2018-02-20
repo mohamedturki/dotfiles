@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/mohamedturki/.dotfiles'
 let g:netrw_dirhist_2='/Users/mohamedturki/dev/uberall.com/user-frontend'
+let g:netrw_dirhist_3='/Users/mturki/dev/contentful/user_interface'
+let g:netrw_dirhist_4='/Users/mturki/dev/contentful/user_interface/src'
+let g:netrw_dirhist_5='/Users/mturki/dev/contentful/user_interface/src/javascripts'
+let g:netrw_dirhist_6='/Users/mturki/dev/contentful/user_interface/src'
+let g:netrw_dirhist_7='/Users/mturki/dev/contentful/user_interface'
+let g:netrw_dirhist_8='/Users/mturki/.oni'
