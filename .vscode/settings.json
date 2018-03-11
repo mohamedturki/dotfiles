@@ -1,0 +1,83 @@
+{
+    "editor.fontFamily": "Monaco, 'Courier New', monospace",
+    "editor.cursorStyle": "block-outline",
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 1,
+    "window.zoomLevel": 0,
+    "explorer.decorations.colors": true,
+    "explorer.decorations.badges": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    // vim settings
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": ",",
+    "vim.handleKeys":{
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.cursorStylePerMode" : {
+        "insert": "block-outline",
+        "replace": "block-outline"
+    },
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.cmdLineInitialColon": true,
+    "vim.insertModeKeyBindings": [],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before":["<C-n>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":noh",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<g-r>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.referenceSearch.trigger",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "editor.renderIndentGuides": false,
+    "workbench.colorTheme": "One Monokai",
+    "workbench.activityBar.visible": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "elm.formatOnSave": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true,
+    "prettier.singleQuote": true,
+    "gitlens.keymap": "alternate",
+}
