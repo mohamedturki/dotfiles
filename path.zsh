@@ -17,7 +17,7 @@ export PATH="$DOTFILES/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Golang path settings
-export GOPATH="$CODE/golang"
+export GOPATH="$HOME/golang"
 export PATH="$PATH:$GOPATH/bin"
 
 export ELM_MAKE_PATH="$HOME/.nvm/versions/node/v6.11.0/bin/elm-make"
