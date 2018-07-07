@@ -2,6 +2,7 @@
 alias d='git diff'
 alias s='git status'
 alias c='git checkout'
+alias cb='git checkout -b'
 alias l='git pull'
 
 alias b='git branch -v'

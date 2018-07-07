@@ -99,7 +99,5 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
 # added by travis gem
 [ -f /Users/mturki/.travis/travis.sh ] && source /Users/mturki/.travis/travis.sh

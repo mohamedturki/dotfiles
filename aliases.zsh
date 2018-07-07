@@ -56,5 +56,7 @@ alias prrev="open $(hub browse -u -- pulls)/review-requested/mohamedturki"
 alias prs="open $(hub browse -u -- pulls)/mohamedturki"
 
 alias cui="itermocil ui"
+
+alias python="python3"
 source "$DOTFILES/.git_aliases.zsh"
 
