@@ -1,0 +1,25 @@
+apt update
+# Make config directory for Neovim's init.vim
+mkdir -p ~/.config/nvim
+
+# Copy init.vim in current working directory to nvim's config location. Alternatively, soft link with `ln -sf $(readlink -f init.vim) ~/.config/nvim/.`, if you soft link, do not delete this directory
+ln -s $(pwd)/*.vim  ~/.config/nvim/
+
+# Install nvim (and its dependencies: pip3, git), Python 3 and ctags (for tagbar)
+apt install curl neovim python3 python3-pip git exuberant-ctags silversearcher-ag -y
+
+# Install virtualenv to containerize dependencies
+pip3 install --user virtualenv
+python3 -m virtualenv ~/.config/nvim/env
+
+# Install pip modules for Neovim within the virtual environment created
+source ~/.config/nvim/env/bin/activate
+pip install neovim jedi psutil setproctitle
+deactivate
+
+# Install vim-plug plugin manager
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install fzf CLI tool
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
