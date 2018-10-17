@@ -34,6 +34,13 @@ function nb {
   git branch --set-upstream-to origin/$NEW_BRANCH_NAME
 }
 
+# Clones a Github repository
+# Example: clone mohamedturki/dotfiles
+function clone {
+  GITHUB_REPO_PATH=$1
+  git clone git@github.com:$GITHUB_REPO_PATH.git
+}
+
 function git_clean_branches {
   git branch --merged master | grep -v "master" | grep -v "^\*" | xargs -n 1  bash -c 'git branch -D $@ && git push origin $@ 2> /dev/null' bash
 }
@@ -42,10 +49,6 @@ alias gcl=git_clean_branches
 
 function preview {
   open $PREVIEW_ENV?ui_version=$(git branch | grep \* | cut -d ' ' -f2)
-}
-
-function sg {
-  open http://localhost:3001/styleguide/
 }
 
 # who is using the laptop's iSight camera?
