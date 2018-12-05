@@ -45,6 +45,10 @@ function git_clean_branches {
   git branch --merged master | grep -v "master" | grep -v "^\*" | xargs -n 1  bash -c 'git branch -D $@ && git push origin $@ 2> /dev/null' bash
 }
 
+function git_code_evolution {
+  git log --pretty=format:'[%h] %an %ad %s' --date=short --numstat --after=$1
+}
+
 alias gcl=git_clean_branches
 
 function preview {

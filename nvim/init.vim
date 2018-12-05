@@ -65,9 +65,10 @@ Plug 'mileszs/ack.vim'
 " Language support
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-" Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chemzqm/vim-jsx-improve'
+Plug 'digitaltoad/vim-pug'
 Plug 'w0rp/ale'
 
 " Language server/autocomplete setup

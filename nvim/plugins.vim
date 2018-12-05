@@ -33,7 +33,7 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_linters = {
 			\   'javascript': ['eslint'],
 			\}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier', 'prettier-standard'], 'json': ['prettier']}
 autocmd BufWritePost *.js,*.jsx,*.json,*.md,*.py ALEFix
 
 " == NCM2 ===
@@ -47,12 +47,37 @@ let g:LanguageClient_serverCommands = {
 	\ 'python': ['/usr/local/bin/pyls'],
   \ }
 
+" This tells ALE to not complain if there is no linting
+" for file types not defined above.
+let g:ale_linters_explicit = 1
+
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> gr :call LanguageClient#textDocument_rename()<CR>
 
 " ==== vim-notes ====
-let g:notes_directories = ['~/Documents/Notes', '~/dev/journal']
-
+let g:notes_directories = ['~/Documents/Notes']
+let g:notes_title_sync = 'no'
 " === Editor config ===
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" === vim-go ====
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+
+
+" ===== vim-jsdoc ====
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_additional_descriptions = 1
 
