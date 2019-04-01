@@ -96,8 +96,15 @@ export EDITOR="nvim"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+export FZF_DEFAULT_OPTS='
+--color fg:-1,bg:-1,hl:-1,fg+:3,bg+:-1,hl+:-1
+--color info:150,prompt:110,spinner:150,pointer:167,marker:174
+'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # added by travis gem
 [ -f /Users/mturki/.travis/travis.sh ] && source /Users/mturki/.travis/travis.sh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

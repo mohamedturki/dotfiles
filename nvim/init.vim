@@ -54,7 +54,9 @@ Plug 'xolox/vim-misc' " Needed for vim-notes.
 Plug 'xolox/vim-notes'
 
 Plug 'joshdick/onedark.vim'
-Plug 'iCyMind/NeoSolarized'
+Plug 'albertorestifo/github.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'icymind/NeoSolarized'
 
 " File/Dirs navigation/search
 Plug 'scrooloose/nerdtree'
@@ -87,3 +89,7 @@ call plug#end()
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/ui.vim
+
+if @% == ""
+  bd
+endif

@@ -81,3 +81,7 @@ let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_additional_descriptions = 1
 
+" ===== lightline =====
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
