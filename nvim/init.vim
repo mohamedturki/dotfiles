@@ -72,6 +72,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chemzqm/vim-jsx-improve'
 Plug 'digitaltoad/vim-pug'
 Plug 'w0rp/ale'
+Plug 'hashivim/vim-terraform'
 
 " Language server/autocomplete setup
 " A dependency of 'ncm2'.

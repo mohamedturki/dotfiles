@@ -58,5 +58,7 @@ alias prs="open $(hub browse -u -- pulls)/mohamedturki"
 alias cui="itermocil ui"
 
 alias python="python3"
+alias tf="terraform"
+
 source "$DOTFILES/.git_aliases.zsh"
 

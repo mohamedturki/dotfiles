@@ -55,6 +55,12 @@ function preview {
   open $PREVIEW_ENV?ui_version=$(git branch | grep \* | cut -d ' ' -f2)
 }
 
+function frep {
+  oldValue=$1
+  newValue=$2
+  ag $oldValue -l | xargs sed -i '' -e "s/$oldValue/$newValue/g"
+}
+
 # who is using the laptop's iSight camera?
 camerausedby () {
   echo "Checking to see who is using the iSight camera… 📷"

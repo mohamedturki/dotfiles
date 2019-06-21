@@ -33,7 +33,7 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_linters = {
 			\   'javascript': ['eslint'],
 			\}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier', 'prettier-standard'], 'json': ['prettier']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier', 'prettier-standard'], 'json': ['prettier'], 'markdown': ['prettier']}
 autocmd BufWritePost *.js,*.jsx,*.json,*.md,*.py ALEFix
 
 " == NCM2 ===
@@ -85,3 +85,6 @@ let g:jsdoc_additional_descriptions = 1
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
+
+" ===== Terraform ===
+let g:terraform_fmt_on_save=1

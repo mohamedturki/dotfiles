@@ -5,8 +5,7 @@ export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 # Code repositories path
-export CODE=$HOME/dev
-
+export CODE=$HOME/dev 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -56,7 +55,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node docker docker-compose heroku httpie vagrant hub)
+plugins=(git node docker docker-compose heroku httpie vagrant hub kubectl aws terraform)
 
 
 # Activate Oh-My-Zsh
@@ -108,3 +107,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -f /Users/mturki/.travis/travis.sh ] && source /Users/mturki/.travis/travis.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/dev/contentful/cf-aws-login/bin:$PATH"
