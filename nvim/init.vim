@@ -66,24 +66,13 @@ Plug 'mileszs/ack.vim'
 
 " Language support
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'heavenshell/vim-jsdoc'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chemzqm/vim-jsx-improve'
 Plug 'digitaltoad/vim-pug'
-Plug 'w0rp/ale'
 Plug 'hashivim/vim-terraform'
-
-" Language server/autocomplete setup
-" A dependency of 'ncm2'.
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-path'
-Plug 'autozimu/LanguageClient-neovim', {
-  \ 'branch': 'next',
-  \ 'do': 'bash install.sh',
-  \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'chr4/nginx.vim'
 
 call plug#end()
 

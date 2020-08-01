@@ -8,9 +8,6 @@ if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Install oh-my-zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-
 # Update Homebrew recipes
 brew update
 
@@ -32,4 +29,3 @@ mkdir $HOME/dev
 source .macos
 ./symlink-setup.sh
 cp env.secrets.zsh $HOME/.env.secrets.zsh
-./node.sh
