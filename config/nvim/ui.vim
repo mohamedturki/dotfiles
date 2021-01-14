@@ -13,3 +13,4 @@ autocmd BufNewFile,BufRead *.js setfiletype json syntax=javascript
 autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 
 let g:tablineclosebutton=1
+set diffopt=filler,context:0

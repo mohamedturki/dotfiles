@@ -1,10 +1,3 @@
-# Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/dupes'
-
 # Install GNU core utilities (those that come with macOS are outdated)
 brew 'coreutils'
 
@@ -13,40 +6,33 @@ brew 'findutils'
 
 # Install Bash 4
 brew 'bash'
-
-# Install more recent versions of some macOS tools
-brew 'homebrew/dupes/grep'
+brew 'fish'
 
 # Install Binaries
-brew 'awscli'
 brew 'git'
-brew 'tree'
+brew 'pstree'
+brew 'awscli'
+brew 'terraform'
 brew 'trash'
 brew 'wget'
-brew 'python3'
+brew 'python'
 brew 'go'
-brew 'postgres'
 brew 'docker'
 brew 'fontforge'
+brew 'neovim'
+brew 'tmux'
 
 # Apps
 cask '1password'
 cask 'flux'
-cask 'google-chrome'
-cask 'google-drive'
 cask 'iterm2'
 cask 'slack'
+cask 'zoom'
+cask 'telegram'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vlc'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-
-# Fonts
-cask 'font-hack-nerd-font'
-
-cask 'qlstephen'
+cask 'rectangle'
+cask 'alfred'
+cask 'spotify'
+cask 'firefox'

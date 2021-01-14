@@ -1,11 +1,14 @@
 #!/bin/sh
 
+setup_macos = 0
 echo "Setting up your Mac..."
 sudo -v
 
+echo "Checking if Homebrew is installed..."
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Installing Homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Update Homebrew recipes
@@ -18,14 +21,18 @@ brew bundle
 # Link installed apps to /Applications
 brew linkapps
 
-# Make ZSH the default shell environment
-chsh -s $(which zsh)
+# Make Fish the default shell environment
+echo "Setting up fish as default and installing oh-my-fish"
+chsh -s $(which fish)
+curl -L https://get.oh-my.fish | fish
 
 # Create directory for all my code repositories.
-mkdir $HOME/dev
+mkdir -p $HOME/dev
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
-source .macos
+if setup_macos; then
+  source .macos
+fi
+
 ./symlink-setup.sh
-cp env.secrets.zsh $HOME/.env.secrets.zsh

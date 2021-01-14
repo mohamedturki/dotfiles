@@ -3,3 +3,4 @@ vim/bundle/*
 *.swp
 *.secrets
 .vscode/extensions
+*.secrets.fish

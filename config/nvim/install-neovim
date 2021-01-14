@@ -1,12 +1,9 @@
-apt update
+#!/bin/bash
 # Make config directory for Neovim's init.vim
 mkdir -p ~/.config/nvim
 
 # Copy init.vim in current working directory to nvim's config location. Alternatively, soft link with `ln -sf $(readlink -f init.vim) ~/.config/nvim/.`, if you soft link, do not delete this directory
 ln -s $(pwd)/*.vim  ~/.config/nvim/
-
-# Install nvim (and its dependencies: pip3, git), Python 3 and ctags (for tagbar)
-apt install curl neovim python3 python3-pip git exuberant-ctags silversearcher-ag -y
 
 # Install virtualenv to containerize dependencies
 pip3 install --user virtualenv

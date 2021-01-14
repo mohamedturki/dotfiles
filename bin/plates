@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+const allPlates = [25, 20, 15, 10, 5, 2.5, 1.25, 1, 0.5, 0.25]
+const warmupPlates = [25, 20, 15, 10, 5, 2.5, 1.25] 
+const totalSets = [{ intensity: 0.45, sets: 1, reps: 5 }, { intensity: 0.65, sets: 1, reps: 3 }, { intensity: 0.85, sets: 1, reps: 2 }, { intensity: 1, sets: 3, reps: 5 }]
+const desiredWeight = process.argv[2]
+const barWeight = process.argv[3] || 20
+
+totalSets.forEach(set => {
+    let availablePlatePairs =  warmupPlates
+    let plates = []
+    let intensityWeight = desiredWeight * set.intensity
+    let weight = (intensityWeight - barWeight) / 2
+    if (set.intensity === 1) {
+    availablePlatePairs = allPlates
+    }
+    availablePlatePairs.forEach(plate => {
+        if (weight >= plate) {
+        if (weight / plate >= 1) {
+        plates.push(plate)
+        weight = weight - plate
+        }
+        }
+        })
+    const weightOnTheBar = plates.reduce((prev, next) => prev + next, 0) * 2 + 20
+    console.log(`Plates for ${set.sets}x${set.reps} @ ${set.intensity * 100}% of ${desiredWeight}kg (${weightOnTheBar}kg)`)
+    console.log(plates)
+    })
