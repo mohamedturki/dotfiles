@@ -28,6 +28,7 @@ curl -L https://get.oh-my.fish | fish
 
 # Create directory for all my code repositories.
 mkdir -p $HOME/dev
+mkdir -p ~/.config/fish
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
@@ -35,4 +36,6 @@ if setup_macos; then
   source .macos
 fi
 
+
 ./symlink-setup.sh
+ln -s ./config/fish ~/.config/fish

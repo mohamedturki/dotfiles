@@ -11,8 +11,6 @@ brew 'fish'
 # Install Binaries
 brew 'git'
 brew 'pstree'
-brew 'awscli'
-brew 'terraform'
 brew 'trash'
 brew 'wget'
 brew 'python'
