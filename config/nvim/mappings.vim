@@ -26,3 +26,8 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Vim merge conflict
+nmap <leader>gs :G<CR>
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>

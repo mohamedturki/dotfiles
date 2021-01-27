@@ -28,16 +28,6 @@
 	added = green bold
 	changed = yellow bold
 	untracked = red bold
-[diff]
-	tool = vimdiff
-[difftool]
-	prompt = false
-[gitflow "prefix"]
-	feature = feature-
-	release = release-
-	hotfix = hotfix-
-	support = support-
-	versiontag = v
 [alias]
 	a = add --all
 	ai = add -i
@@ -93,6 +83,7 @@
 	mc = merge --continue
 	ms = merge --skip
 	#############
+  om = checkout master
 	o = checkout
 	ob = checkout -b
 	#############
@@ -123,6 +114,7 @@
 	pbpm = pull --rebase upstream master
 	#############
 	rb = rebase
+  rbm = rebase origin/master
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase --interactive
@@ -156,7 +148,6 @@
 	#############
 	w = show
 	wp = show -p
-	wr = show -p --no-color
 	#############
 	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
@@ -174,12 +165,6 @@
 [pull]
 	rebase = true
 	default = current
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -188,3 +173,9 @@
 	required = true
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+git show $(git log --pretty=oneline | fzf | cut -d=' ' -f1)
+

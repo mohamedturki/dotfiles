@@ -18,7 +18,7 @@ set autoread
 set showmatch
 set cursorline
 set ruler
-set clipboard=unnamed
+set clipboard=unnamedplus
 set splitright
 set noswapfile
 set nobackup
