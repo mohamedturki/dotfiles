@@ -55,6 +55,7 @@
 	ced = commit --allow-empty --amend
 	#############
 	d = diff
+  dm = diff origin/master
 	dc = diff --cached
 	dl = difftool
 	dlc = difftool --cached
@@ -162,6 +163,10 @@
 	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 	############
 	ffs = flow feature start
+
+  ########### Code review commands
+  stat = !git diff --stat --color=always $(git merge-base HEAD master) | sort -n -r
+  dv = !git diff origin/master --name-only | fzf --ansi --preview=\"git diff origin/master --color=always -- {-1}\"
 [pull]
 	rebase = true
 	default = current
