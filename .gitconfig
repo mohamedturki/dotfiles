@@ -4,7 +4,7 @@
 [core]
 	editor = nvim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore_global
+	excludesfile = /home/mo/.gitignore_global
 [web]
 	browser = google-chrome
 [rerere]
@@ -165,9 +165,10 @@
   ########### misc
   upd = !git fetch origin && git reh origin/master
   ########### Code review commands
-  stat = !git diff --stat --color=always $(git merge-base HEAD master) | sort -n -r
-  files = !git diff --name-only $(git merge-base HEAD master)  
-  review = !vim -p $(git files) +\"tabdo Gvdiffsplit master\"
+  stat = !git diff --stat --color=always $(git merge-base HEAD origin/master) | sort -n -r
+  files = !git diff --name-only $(git merge-base HEAD origin/master)  
+  review = !vim -p $(git files) +\"tabdo Gvdiffsplit origin/master\"
+  vpr = !gh pr view -w
 [pull]
 	rebase = true
 	default = current

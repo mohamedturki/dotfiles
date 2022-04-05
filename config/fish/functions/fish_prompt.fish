@@ -18,7 +18,7 @@ function fish_prompt --description 'Informative prompt'
             # printf '[%s][%s | %s] %s%s %s%s%s \f\r> ' (date "+%H:%M:%S") (kubectl config current-context) (kubectl config view --minify --output 'jsonpath={..namespace}') (set_color brblue) \ */
             #      (set_color $fish_color_cwd) $PWD $pipestatus_string $__git_cb \ */
             #     (set_color normal) */
-            printf '[%s] %s%s %s%s%s \f\r> ' (date "+%H:%M:%S") (set_color brblue) \
+            printf '[%s] %s%s %s%s%s \f\r> ' (date "+%H:%M:%S") \
                  (set_color $fish_color_cwd) $PWD $pipestatus_string $__git_cb \
                 (set_color normal)
     end

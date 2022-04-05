@@ -1,11 +1,11 @@
 " ======= NERDTree config =======
-let NERDTreeShowHidden=1
 nmap <leader>s :NERDTreeFind<CR>  " Reveal current file
 nmap <leader>t :NERDTreeToggle<CR> " Toggles dir tree
 autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$','\.pyc$', '\.swp', 'node_modules']
 let NERDTreeSHowHidden=1
-
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " ==== FZF ====
 nnoremap <C-P> :FZF<CR> 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Uses silversearcher/ag in order to respect .gitignore
@@ -47,6 +47,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_fmt_command = "goimports"
+let g:go_def_mapping_enabled = 0
 
 
 " ===== vim-jsdoc ====
@@ -61,3 +62,13 @@ let g:lightline = {
 
 " ===== Terraform ===
 let g:terraform_fmt_on_save=1
+
+" ===== Javascript/Typescript ====
+let g:ale_fixers = {
+      \ 'javascript': ['prettier']
+      \ }
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let g:ale_fix_on_save = 1

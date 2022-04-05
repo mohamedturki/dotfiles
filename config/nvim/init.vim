@@ -68,12 +68,13 @@ Plug 'mileszs/ack.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sebdah/vim-delve'
 Plug 'chemzqm/vim-jsx-improve'
 Plug 'digitaltoad/vim-pug'
 Plug 'hashivim/vim-terraform'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chr4/nginx.vim'
-
+Plug 'w0rp/ale'
 call plug#end()
 
 source $HOME/.config/nvim/mappings.vim
