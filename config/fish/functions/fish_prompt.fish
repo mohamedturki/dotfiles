@@ -1,6 +1,6 @@
 function fish_prompt --description 'Informative prompt'
     if not set -q __git_cb
-    set __git_cb ":"(set_color brown)(git branch ^/dev/null | grep \* | sed 's/* //')(set_color normal)""
+    set __git_cb ":"(set_color brown)(git branch | grep \* | sed 's/* //')(set_color normal)""
     end
     #Save the return status of the previous command
     set -l last_pipestatus $pipestatus
